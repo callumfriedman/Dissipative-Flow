@@ -1,6 +1,34 @@
 # Dissipative Flow
 
-This program uses a finite difference scheme to find the fluid flow through a series of periodic obstacles. The obstacles were assumed to be uniform in the *z* direction, so that the flow could be solved on the (*x*, *y*) plane. The obstacles also provide a frictional force that slows the fluid. Overall, the average fluid flow is constant in time.
+This program uses a finite difference scheme to find the fluid flow through a series of periodic obstacles. 
+
+## Getting Started
+To run this program, you must set up a C development environment on your machine. There are two main ways to do this:
+1. Using an IDE (Integrated Development Environment), see https://fresh2refresh.com/c-programming/c-environment-setup/
+2. Using a GCC compiler, see https://fresh2refresh.com/c-programming/c-environment-setup-using-gcc/
+
+I personally prefer using the GCC method, but it is entirely up to you!
+
+Once you have a C development environment, simply download the files from this repository.
+
+### Prerequisites
+* MATLAB; to visualise the output flow data
+
+## Running the program
+
+You can run the program by loading the file 'flow.c' in your IDE, and then clicking 'Compile and Run'.
+
+Alternatively you can compile it in a GCC compiler using the command
+
+```
+gcc flow.c -Wall -Werror -std=c99 -lm
+```
+
+Data visualisation features are being added soon!
+
+## How does it work?
+
+The obstacles were assumed to be uniform in the *z* direction, so that the flow could be solved on the (*x*, *y*) plane. The obstacles also provide a frictional force that slows the fluid. Overall, the average fluid flow is constant in time.
 
 The equations that had to be solved were the incompressible Navier-Stokes equations fo the fluid velovity **u**, which only has components in the (*x*, *y*) plane. These are solved by time-evolving the scalar fluid vorticity ![](http://latex.codecogs.com/gif.latex?%5Comega%3D%28%5Cnabla%5Ctimes%20%5Cbold%20u%29%5Ccdot%20%5Chat%7B%5Cbold%20z%7D) as a function of space and time:
 
@@ -52,10 +80,6 @@ and
 7. *ν*: viscosity
 8. *u*<sub>0*x*</sub>: *x* component of average velocity
 9. *u*<sub>0*x*</sub>: *y* component of average velocity
-
-
-
-
 
 The code outputs the vorticity *ω*(*x*, *y*) to a file called ‘output.txt’ as a single column, for all the grid points (*x*<sub>*i*</sub>, *y*<sub>*j*</sub>) for each time.
 
