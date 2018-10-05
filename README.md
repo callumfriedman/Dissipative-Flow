@@ -3,6 +3,11 @@
 This program uses a finite difference scheme to find the fluid flow through a series of periodic obstacles. 
 
 ## Getting Started
+
+### Prerequisites
+* C development environment
+* (Optional) MATLAB; to visualise the output flow data
+
 To run this program, you must set up a C development environment on your machine. There are two main ways to do this:
 1. Using an IDE (Integrated Development Environment), see https://fresh2refresh.com/c-programming/c-environment-setup/
 2. Using a GCC compiler, see https://fresh2refresh.com/c-programming/c-environment-setup-using-gcc/
@@ -11,8 +16,7 @@ I personally prefer using the GCC method, but it is entirely up to you!
 
 Once you have a C development environment, simply download the files from this repository.
 
-### Prerequisites
-* MATLAB; to visualise the output flow data
+
 
 ## Running the program
 
