@@ -6,6 +6,7 @@ This program uses a finite difference scheme to find the fluid flow through a se
 
 ### Prerequisites
 * C development environment
+* LAPACK; a linear algebra package for C programs (download and install here: http://www.netlib.org/lapack/)
 * (Optional) MATLAB; to visualise the output flow data
 
 To run this program, you must set up a C development environment on your machine. There are two main ways to do this:
@@ -28,7 +29,7 @@ Alternatively you can compile it in a GCC compiler using the command
 gcc flow.c -Wall -Werror -std=c99 -lm
 ```
 
-Data visualisation features are being added soon!
+Finally, run the MATLAB file 'plot_flow.m' to visualise the vorticity in the (*x*,*y*) plane.
 
 ## How does it work?
 
