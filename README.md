@@ -31,6 +31,8 @@ gcc flow.c -Wall -Werror -std=c99 -lm
 
 Finally, run the MATLAB file 'plot_flow.m' to visualise the vorticity in the (*x*,*y*) plane.
 
+![screenshot1](https://user-images.githubusercontent.com/43573338/46582470-44c03e00-ca3f-11e8-92ac-82306c6fd20e.jpg)
+
 ## How does it work?
 
 The obstacles were assumed to be uniform in the *z* direction, so that the flow could be solved on the (*x*, *y*) plane. The obstacles also provide a frictional force that slows the fluid. Overall, the average fluid flow is constant in time.
